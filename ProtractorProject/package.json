@@ -1,0 +1,14 @@
+{
+  "name": "protractorproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test-conf.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "protractor": "^5.3.1"
+  }
+}
