@@ -16,7 +16,7 @@ describe('testing the https://angular.io/docs page', function() {
         expect(po.resourcesName.getText()).toEqual('RESOURCES');
     });
  
-    xit('checks links to other page', function () {
+    it('checks links to other page', function () {
         po.resourcesLink.click();
         expect(po.resourcesMenuItem.getText()).toEqual('EXPLORE ANGULAR RESOURCES');
     });
