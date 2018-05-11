@@ -37,9 +37,9 @@ describe('testing the https://angular.io/docs page', function() {
         expect(po.searchResTitle.getText()).toEqual('No results found.');
     });
 
-    xit('displays the search area', function () {
+    it('displays the search area', function () {
         po.searchField.sendKeys('a', protractor.Key.ENTER);
-        browser.sleep(7000);
+        browser.sleep(10000);
         expect(po.searchReasults.isPresent()).toBe(true);
     });
 
