@@ -12,6 +12,9 @@ function Page() {
     this.buttonVertMenu=element(by.css('.hamburger.mat-button'));
     this.sideNav=element(by.css('.sidenav.mat-drawer'));
     this.verticalMenuItem=element(by.css('.vertical-menu-item.heading.ng-star-inserted'));
-    this.submenuElement=element(by.css('.vertical-menu-item.level-2'));
+    this.submenuElement=element(by.css('.heading-children.level-1.expanded'));
+    this.vertMenuItem=element(by.css('[title="The fundamentals of Angular"]'));
+    this.subItem=element(by.css('[title="The basic building blocks of Angular applications."]'));
+    this.subSubMenuItem=element(by.css('.heading-children.level-2.expanded'))
 }
 module.exports=new Page();

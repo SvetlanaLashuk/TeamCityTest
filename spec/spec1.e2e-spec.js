@@ -8,7 +8,7 @@ describe('testing the https://angular.io/docs page', function() {
 
     it('checks whether submenus in vertical menu are displayed', function () {
         po.verticalMenuItem.click();
-        expect(po.submenuElement.isPresent()).toBe(true);
+        expect(po.submenuElement.isDisplayed()).toBe(true);
     });
 
     it('checks TAB key', function () {
@@ -16,12 +16,12 @@ describe('testing the https://angular.io/docs page', function() {
         expect(po.resourcesName.getText()).toEqual('RESOURCES');
     });
  
-    xit('checks links to other page', function () {
+    it('checks links to other page', function () {
         po.resourcesLink.click();
-        expect(po.resourcesMenuItem.getText()).toEqual('EXPLORE ANGULAR RESOURCES');
+        expect(browser.getCurrentUrl()).toEqual('https://angular.io/resources');
     });
 
-   it('matches url', function () {
+    it('matches url', function () {
         po.featuresLink.click();
         expect(browser.getCurrentUrl()).toMatch(/\/features/);
     });
@@ -37,10 +37,16 @@ describe('testing the https://angular.io/docs page', function() {
         expect(po.searchResTitle.getText()).toEqual('No results found.');
     });
 
+    it("checks whether subitems of the submenu in vertical menu are displayed", function () {
+        po.vertMenuItem.click();
+        po.subItem.click();
+        expect(po.subSubMenuItem.isDisplayed()).toBe(true);
+    });
+
     it('displays the search area', function () {
         po.searchField.sendKeys('a', protractor.Key.ENTER);
         browser.sleep(10000);
-        expect(po.searchReasults.isPresent()).toBe(true);
+        expect(po.searchReasults.isDisplayed()).toBe(true);
     });
 
     it('goes to the home page', function () {
