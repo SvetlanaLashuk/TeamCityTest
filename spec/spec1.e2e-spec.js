@@ -15,12 +15,7 @@ describe('testing the https://angular.io/docs page', function() {
         po.docsMenuItem.sendKeys(protractor.Key.TAB);
         expect(po.resourcesName.getText()).toEqual('RESOURCES');
     });
- 
-    it('checks links to other page', function () {
-        po.resourcesLink.click();
-        expect(browser.getCurrentUrl()).toEqual('https://angular.io/resources');
-    });
-
+    
     it('matches url', function () {
         po.featuresLink.click();
         expect(browser.getCurrentUrl()).toMatch(/\/features/);
