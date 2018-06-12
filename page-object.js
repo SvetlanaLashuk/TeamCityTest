@@ -1,6 +1,5 @@
 function Page() {
     this.featuresLink=element(by.css('[href="features"]'));
-    this.resourcesLink=element(by.css('[href="resources"]'));
     this.resourcesName=element(by.css('[title="Resources"]'));
     this.searchField=element(by.css('[type="search"]'));
     this.searchResTitle=element(by.css('aio-search-results'));
@@ -8,13 +7,14 @@ function Page() {
     this.navigationBar=element(by.css('ul [role="navigation"]'));
     this.searchReasults=element(by.css('.search-area'));
     this.docsMenuItem=element(by.css('[title="Docs"]'));
-    this.resourcesMenuItem=element(by.css('.banner-headline'));
     this.buttonVertMenu=element(by.css('.hamburger.mat-button'));
     this.sideNav=element(by.css('.sidenav.mat-drawer'));
     this.verticalMenuItem=element(by.css('.vertical-menu-item.heading.ng-star-inserted'));
     this.submenuElement=element(by.css('.heading-children.level-1.expanded'));
     this.vertMenuItem=element(by.css('[title="The fundamentals of Angular"]'));
     this.subItem=element(by.css('[title="The basic building blocks of Angular applications."]'));
-    this.subSubMenuItem=element(by.css('.heading-children.level-2.expanded'))
+    this.subSubMenuItem=element(by.css('.heading-children.level-2.expanded'));
+    this.firstMenuItem=element(by.css('[title="A gentle introduction to Angular."]'));
+    this.title=element(by.css('h1#quickstart'));
 }
 module.exports=new Page();

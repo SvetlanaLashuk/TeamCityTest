@@ -15,7 +15,7 @@ describe('testing the https://angular.io/docs page', function() {
         po.docsMenuItem.sendKeys(protractor.Key.TAB);
         expect(po.resourcesName.getText()).toEqual('RESOURCES');
     });
-    
+
     it('matches url', function () {
         po.featuresLink.click();
         expect(browser.getCurrentUrl()).toMatch(/\/features/);
@@ -42,6 +42,11 @@ describe('testing the https://angular.io/docs page', function() {
         po.searchField.sendKeys('a', protractor.Key.ENTER);
         browser.sleep(10000);
         expect(po.searchReasults.isDisplayed()).toBe(true);
+    });
+
+    it('verifies that the header matches the expected header', function () {
+        po.firstMenuItem.click();
+        expect(po.title.getText()).toEqual('QuickStart');
     });
 
     it('goes to the home page', function () {
