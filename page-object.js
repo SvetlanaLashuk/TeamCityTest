@@ -14,7 +14,6 @@ function Page() {
     this.vertMenuItem=element(by.css('[title="The fundamentals of Angular"]'));
     this.subItem=element(by.css('[title="The basic building blocks of Angular applications."]'));
     this.subSubMenuItem=element(by.css('.heading-children.level-2.expanded'));
-    this.firstMenuItem=element(by.css('[title="A gentle introduction to Angular."]'));
-    this.title=element(by.css('h1#quickstart'));
+    this.title=element(by.css('#what-is-angular'));
 }
 module.exports=new Page();

@@ -45,8 +45,7 @@ describe('testing the https://angular.io/docs page', function() {
     });
 
     it('verifies that the header matches the expected header', function () {
-        po.firstMenuItem.click();
-        expect(po.title.getText()).toEqual('QuickStart');
+        expect(po.title.getText()).toEqual('What is Angular?');
     });
 
     it('goes to the home page', function () {
